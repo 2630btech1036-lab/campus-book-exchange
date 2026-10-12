@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List a Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>List a Book</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="books.html">Browse Books</a>
+        <a href="list-book.html">List a Book</a>
+    </nav>
+
+    <div id="bookForm">
+        <h2 id="formHeading">Enter Book Details</h2>
+
+        <p>Student Name:</p>
+        <input type="text" id="studentName">
+
+        <p>Book Title:</p>
+        <input type="text" id="title">
+
+        <p>Author:</p>
+        <input type="text" id="author">
+
+        <p>Subject / Category:</p>
+        <input type="text" id="category">
+
+        <p>Book Condition:</p>
+        <input type="text" id="condition">
+
+        <br><br>
+
+        <button onclick="submitBook()">Submit</button>
+
+        <p id="formMessage"></p>
+    </div>
+
+    <br>
+
+    <button onclick="changeFontSize()">Change Heading Size</button>
+
+    <button onclick="hideForm()">Show / Hide Form</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

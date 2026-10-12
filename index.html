@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Book Exchange</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+            margin: 20px;
+        }
+
+        header {
+            background-color: lightblue;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: darkblue;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 15px;
+        }
+
+        h2 {
+            color: darkblue;
+        }
+
+        .book {
+            background-color: white;
+            border: 1px solid black;
+            margin: 15px;
+            padding: 15px;
+        }
+
+        button {
+            padding: 8px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="heading">Campus Book Exchange</h1>
+        <p>Share Books, Help Students!</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="books.html">Browse Books</a>
+        <a href="list.html">List a Book</a>
+    </nav>
+
+    <h2>Welcome Students!</h2>
+
+    <p>
+        Welcome to Campus Book Exchange.
+        Here students can share their old books
+        and find useful books from other students.
+        It helps students save money and reuse books.
+    </p>
+
+    <button onclick="changeHeading()">Change Heading</button>
+
+    <h2>Featured Books</h2>
+
+    <div id="featuredBooks">
+
+        <div class="book" id="book1">
+            <h3>Let Us C</h3>
+            <p>Author: Yashavant Kanetkar</p>
+            <p>Category: Programming</p>
+        </div>
+
+        <div class="book" id="book2">
+            <h3>Wings of Fire</h3>
+            <p>Author: A. P. J. Abdul Kalam</p>
+            <p>Category: Biography</p>
+        </div>
+
+        <div class="book" id="book3">
+            <h3>The Alchemist</h3>
+            <p>Author: Paulo Coelho</p>
+            <p>Category: Fiction</p>
+        </div>
+
+    </div>
+
+    <button onclick="changeColour()">Change Book Colour</button>
+
+    <button onclick="hideBooks()">Show / Hide Books</button>
+
+    <script>
+        function changeHeading() {
+            document.getElementById("heading").textContent =
+                "Welcome to Our Book Corner!";
+        }
+
+        function changeColour() {
+            document.getElementById("book1").style.backgroundColor =
+                "yellow";
+        }
+
+        function hideBooks() {
+            document.getElementById("featuredBooks").classList.toggle("hide");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+body {
+    font-family: Arial;
+    background-color: lightgray;
+    margin: 20px;
+}
+
+header {
+    background-color: lightblue;
+    text-align: center;
+    padding: 15px;
+}
+
+nav {
+    background-color: darkblue;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+h2 {
+    color: darkblue;
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.book {
+    background-color: white;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 15px;
+    width: 220px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: lightblue;
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: skyblue;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+}
+
+#bookForm {
+    background-color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.hide {
+    display: none;
+}

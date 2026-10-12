@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browse Books</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: darkblue;
+        }
+
+        .book {
+            background-color: white;
+            border: 1px solid black;
+            margin: 15px;
+            padding: 15px;
+        }
+
+        button {
+            padding: 8px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        nav a {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Browse Books</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="books.html">Browse Books</a>
+        <a href="list.html">List a Book</a>
+    </nav>
+
+    <h2>Available Books</h2>
+
+    <div class="book" id="book1">
+        <h3>Let Us C</h3>
+        <p>Author: Yashavant Kanetkar</p>
+        <p>Category: Programming</p>
+        <p>Condition: Good</p>
+
+        <button id="btn1"
+        onclick="requestBook('btn1', 'msg1')">
+            Mark as Requested
+        </button>
+
+        <p id="msg1"></p>
+    </div>
+
+    <div class="book" id="book2">
+        <h3>Wings of Fire</h3>
+        <p>Author: A. P. J. Abdul Kalam</p>
+        <p>Category: Biography</p>
+        <p>Condition: Very Good</p>
+
+        <button id="btn2"
+        onclick="requestBook('btn2', 'msg2')">
+            Mark as Requested
+        </button>
+
+        <p id="msg2"></p>
+    </div>
+
+    <div class="book" id="book3">
+        <h3>The Alchemist</h3>
+        <p>Author: Paulo Coelho</p>
+        <p>Category: Fiction</p>
+        <p>Condition: Good</p>
+
+        <button id="btn3"
+        onclick="requestBook('btn3', 'msg3')">
+            Mark as Requested
+        </button>
+
+        <p id="msg3"></p>
+    </div>
+
+    <div class="book" id="book4">
+        <h3>Atomic Habits</h3>
+        <p>Author: James Clear</p>
+        <p>Category: Self-help</p>
+        <p>Condition: Excellent</p>
+
+        <button id="btn4"
+        onclick="requestBook('btn4', 'msg4')">
+            Mark as Requested
+        </button>
+
+        <p id="msg4"></p>
+    </div>
+
+    <h2>Enter a Book Title</h2>
+
+    <input type="text" id="bookTitle"
+    placeholder="Enter book name">
+
+    <button onclick="showBook()">Show Book</button>
+
+    <p id="result"></p>
+    <p id="message"></p>
+
+    <h2>Change Book Card</h2>
+
+    <button onclick="changeBook()">Change Colour</button>
+
+    <script>
+        function requestBook(buttonId, messageId) {
+            document.getElementById(buttonId).textContent =
+                "Request Sent";
+
+            document.getElementById(messageId).textContent =
+                "Your request has been sent!";
+        }
+
+        function showBook() {
+            let title = document.getElementById("bookTitle").value;
+
+            if (title == "") {
+                document.getElementById("message").textContent =
+                    "Please enter a book title.";
+            } else {
+                document.getElementById("result").textContent =
+                    "Book Title: " + title;
+
+                document.getElementById("message").textContent =
+                    "Book title submitted successfully!";
+            }
+        }
+
+        function changeBook() {
+            document.getElementById("book1").style.backgroundColor =
+                "yellow";
+        }
+    </script>
+
+</body>
+</html>
+
